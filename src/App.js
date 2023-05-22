@@ -1,35 +1,36 @@
-// import logo from './logo.svg';
-import logo from "./logo.png"
-import "./App.css"
-import { useEffect } from "react"
-import { useState } from "react"
+// import room from "./top2.png";
+import finalRoof from "./finalroof.png";
+import room from "./newroom.png";
+import "./App.css";
+import { useEffect } from "react";
+import { useState } from "react";
 
 function App() {
-  const [scrollY, setScrollY] = useState(0)
-  const [sideScroll, setSideScroll] = useState(0)
-  const [scrollY1, setScrollY1] = useState(0)
-  const [scrollY3, setScrollY3] = useState(0)
-  const [opacity, setOpacity] = useState(1)
-  console.log(scrollY, "sc")
+  const [scrollY, setScrollY] = useState(0);
+  const [sideScroll, setSideScroll] = useState(0);
+  const [scrollY1, setScrollY1] = useState(0);
+  const [scrollY3, setScrollY3] = useState(0);
+  const [opacity, setOpacity] = useState(1);
+  console.log(scrollY, "sc");
   useEffect(() => {
     const handleScroll = () => {
       if (window.pageYOffset >= 1400) {
-        setSideScroll(1400)
+        setSideScroll(1400);
       } else {
-        setSideScroll(window.pageYOffset)
+        setSideScroll(window.pageYOffset);
       }
-      setScrollY1(window.pageYOffset)
+      setScrollY1(window.pageYOffset);
 
-      setScrollY(window.pageYOffset)
-      setOpacity(opacity - window.pageYOffset / 600)
-    }
-    handleScroll()
+      setScrollY(window.pageYOffset);
+      setOpacity(opacity - window.pageYOffset / 600);
+    };
+    handleScroll();
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -119,13 +120,44 @@ function App() {
           <i></i>
         </div>
       </header>
-      <div style={{ height: "420vh" }}>fsssdf</div>
+      {/* <div style={{ height: "420vh" }}>fsssdf</div> */}
+
       <div class="header-placeholder"></div>
+
+      <div style={{ width: "100%", position: "absolute", zIndex: "10" }}>
+        <img
+          src={finalRoof}
+          alt=""
+          style={{ width: "100%", zIndex: "10", marginBottom: "-9px" }}
+        />
+        {/* <div
+          className="gradient-1"
+          style={{
+            height: "25vh",
+            backgroundColor: "#0d1005",
+            // width: "100%",
+            borderTop: "solid 10px black",
+            // borderBottom: "none",
+          }}
+        ></div> */}
+        <div
+          className="gradient"
+          style={{
+            height: "80vh",
+            backgroundColor: "#0d1005",
+            width: "100%",
+            borderTop: "solid 11px black",
+          }}
+        ></div>
+        <img src={room} alt="" style={{ width: "100%", zIndex: "10" }} />
+      </div>
+
       <section>
         <div className="room-top"></div>
+        <div className="section"></div>
       </section>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
