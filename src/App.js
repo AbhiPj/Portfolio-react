@@ -128,7 +128,7 @@ function App() {
         <img
           src={finalRoof}
           alt=""
-          style={{ width: "100%", zIndex: "10", marginBottom: "-9px" }}
+          style={{ width: "100%", zIndex: "10", marginBottom: "-20px" }}
         />
         {/* <div
           className="gradient-1"
@@ -141,14 +141,61 @@ function App() {
           }}
         ></div> */}
         <div
-          className="gradient"
+          // className="gradient"
           style={{
-            height: "80vh",
-            backgroundColor: "#0d1005",
             width: "100%",
-            borderTop: "solid 11px black",
+            display: "flex",
+            alignItems: "flex-end",
+            marginTop: "-105px",
           }}
-        ></div>
+        >
+          <div style={{ position: "relative" }}>
+            <div
+              style={{
+                position: "absolute",
+                top: "110px",
+                height: "268px",
+                left: "0px",
+                width: "395px",
+                background: "rgb(24, 32, 103)",
+                zIndex: "-1",
+                transform: "rotateZ(153deg)",
+              }}
+            ></div>
+
+            <div
+              style={{
+                position: "absolute",
+                top: "27px",
+                height: "268px",
+                left: "315px",
+                width: "905px",
+                background: "rgb(24, 32, 103)",
+                zIndex: "-1",
+                transform: "rotateZ(179deg)",
+              }}
+            ></div>
+
+            <div
+              // className="gradient"
+              style={{
+                height: "30vh",
+                width: "82px",
+                marginTop: "201px",
+                background: "rgb(24, 32, 103)",
+              }}
+            ></div>
+          </div>
+          <div
+            className="gradient"
+            style={{
+              height: "40vh",
+              backgroundColor: "#0d1005",
+              width: "100%",
+              borderTop: "solid 9px black",
+            }}
+          ></div>
+        </div>
         <img src={room} alt="" style={{ width: "100%", zIndex: "10" }} />
       </div>
 
