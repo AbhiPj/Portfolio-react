@@ -9,7 +9,6 @@ function App() {
   const [scrollY, setScrollY] = useState(0);
   const [sideScroll, setSideScroll] = useState(0);
   const [scrollY1, setScrollY1] = useState(0);
-  const [scrollY3, setScrollY3] = useState(0);
   const [opacity, setOpacity] = useState(1);
   console.log(scrollY, "sc");
   useEffect(() => {
@@ -30,7 +29,7 @@ function App() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [opacity]);
 
   return (
     <>
