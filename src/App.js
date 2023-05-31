@@ -29,7 +29,8 @@ function App() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [opacity]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
